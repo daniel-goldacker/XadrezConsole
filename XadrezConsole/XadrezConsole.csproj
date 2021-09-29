@@ -7,5 +7,9 @@
 
   <ItemGroup>
     <None Remove="Tabuleiro\" />
+    <None Remove="xadrez\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="xadrez\" />
   </ItemGroup>
 </Project>
