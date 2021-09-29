@@ -8,7 +8,4 @@
   <ItemGroup>
     <None Remove="Tabuleiro\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tabuleiro\" />
-  </ItemGroup>
 </Project>
