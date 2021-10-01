@@ -20,7 +20,15 @@
 
         public Peca Peca(Posicao pos)
         {
-            return pecas[pos.Linha, pos.Coluna];
+            try
+            {
+                return pecas[pos.Linha, pos.Coluna];
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
+            
         }
 
         public void ColocarPeca(Peca p, Posicao pos)
@@ -48,7 +56,7 @@
 
         public bool PosicaoValida(Posicao pos)
         {
-            if (pos.Linha < 0 || pos.Linha > Linhas || pos.Coluna < 0 || pos.Coluna > Colunas)
+            if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas)
             {
                 return false;
             }
