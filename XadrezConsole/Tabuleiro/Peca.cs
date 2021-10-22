@@ -20,6 +20,28 @@
             QtdMovimento += 1;
         }
 
+        public bool ExisteMovimentosPossiveis()
+        {
+            bool[,] mat = MovimentosPosiveis();
+            for (int l = 0; l < Tab.Linhas; l++)
+            {
+                for (int c = 0; c < Tab.Colunas; c++)
+                {
+                    if (mat[l, c])
+                    {
+                        return true;
+                     }
+                }
+            }
+
+            return false;
+        }
+
+        public bool PodeMoverPara(Posicao pos)
+        {
+            return MovimentosPosiveis()[pos.Linha, pos.Coluna];
+        }
+
         public abstract bool[,] MovimentosPosiveis();
 
     }
