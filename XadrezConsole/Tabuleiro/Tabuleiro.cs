@@ -20,15 +20,7 @@
 
         public Peca Peca(Posicao pos)
         {
-            try
-            {
-                return pecas[pos.Linha, pos.Coluna];
-            }
-            catch (System.Exception ex)
-            {
-                return null;
-            }
-            
+            return pecas[pos.Linha, pos.Coluna];  
         }
 
         public void ColocarPeca(Peca p, Posicao pos)
